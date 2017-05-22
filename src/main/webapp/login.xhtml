@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Login</title>
+        <f:facet name="last">
+            <h:outputStylesheet library="css" name="signin.css"  />
+            <h:outputStylesheet library="css" name="bootstrap.min.css"  />
+        </f:facet>
+    </h:head>
+    <h:body>
+        <div class="container">
+
+            <h:form class="form-signin" id="formLogin">
+                <h2 class="form-signin-heading">Acesse o sistema</h2>
+                <label for="inputEmail" class="sr-only">Usuário</label>
+                <h:inputText id="inputEmail" class="form-control" value="#{login.usuario}"/>
+                <label for="inputPassword" class="sr-only">Senha</label>
+                <h:inputSecret id="inputPassword" class="form-control" value="#{login.senha}"/>
+                <h:commandButton class="btn btn-lg btn-primary btn-block" type="submit" value="Acessar" action="#{login.fazerLogin()}"></h:commandButton>
+                <br/><br/>
+                <h:message for="formLogin:inputEmail" errorClass="erro" infoClass="info"/>
+            </h:form>
+
+        </div> <!-- /container -->
+    </h:body>
+</html>
+
