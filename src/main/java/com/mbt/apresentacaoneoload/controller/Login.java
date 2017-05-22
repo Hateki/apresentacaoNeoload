@@ -5,6 +5,7 @@
  */
 package com.mbt.apresentacaoneoload.controller;
 
+import java.io.Serializable;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -21,7 +22,7 @@ import javax.faces.context.FacesContext;
  */
 @ManagedBean
 @ViewScoped
-public class Login {
+public class Login implements Serializable{
 
     private String usuario;
     private String senha;
